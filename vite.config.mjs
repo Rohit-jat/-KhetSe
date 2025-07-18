@@ -7,10 +7,10 @@ import tagger from "@dhiwise/component-tagger";
 export default defineConfig({
   // This changes the out put dir from dist to build
   // comment this out if that isn't relevant for your project
+  base: './', // optional, needed if paths break
   build: {
-    outDir: "build",
-    chunkSizeWarningLimit: 2000,
-  },
+    outDir: 'dist',
+}},
   plugins: [tsconfigPaths(), react(), tagger()],
   server: {
     port: "4028",
